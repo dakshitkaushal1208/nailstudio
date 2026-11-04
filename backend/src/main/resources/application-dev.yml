@@ -1,0 +1,17 @@
+spring:
+  flyway:
+    # db/seed holds sample services and demo products. Development only.
+    locations: classpath:db/migration,classpath:db/seed
+
+logging:
+  level:
+    com.cuteicles: DEBUG
+    org.springframework.security: INFO
+
+app:
+  jwt:
+    expose-token-in-body: true
+  payments:
+    test-mode-enabled: true
+  notifications:
+    dev-outbox-dir: ./dev-outbox

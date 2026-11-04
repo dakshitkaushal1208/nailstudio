@@ -1,0 +1,61 @@
+import { sampleImage as img } from './assets';
+
+// SAMPLE services, durations and prices. None of these are confirmed by the
+// studio; edit them in Admin → Services (or replace this file with API data).
+export const seedServices = [
+  {
+    id: 'svc_gel',
+    name: 'Gel Manicure',
+    category: 'Gel polish',
+    description: 'Careful prep, cuticle care and a long-wearing gel colour in a finish of your choice.',
+    durationMin: 60,
+    price: 1200,
+    image: img('s-gel'),
+    active: true,
+    order: 1,
+  },
+  {
+    id: 'svc_ext',
+    name: 'Nail Extensions',
+    category: 'Extensions',
+    description: 'Sculpted length and shape, built around your natural nail. Colour included.',
+    durationMin: 120,
+    price: 2800,
+    image: img('s-extensions'),
+    active: true,
+    order: 2,
+  },
+  {
+    id: 'svc_french',
+    name: 'French Manicure',
+    category: 'French',
+    description: 'The classic, drawn by hand: from a fine, barely-there line to a deeper tip.',
+    durationMin: 75,
+    price: 1500,
+    image: img('s-french'),
+    active: true,
+    order: 3,
+  },
+  {
+    id: 'svc_art',
+    name: 'Nail Art, Bespoke',
+    category: 'Nail art',
+    description: 'Florals, chrome, pearls and fine-line work. Bring a reference and we will plan it together.',
+    durationMin: 150,
+    price: 3500,
+    image: img('s-art'),
+    active: true,
+    order: 4,
+  },
+  {
+    id: 'svc_removal',
+    name: 'Soak-off & Removal',
+    category: 'Removal',
+    description: 'A gentle removal of gel or extensions, followed by a short nail-health treatment.',
+    durationMin: 30,
+    price: 500,
+    image: img('s-removal'),
+    active: true,
+    order: 5,
+  },
+];

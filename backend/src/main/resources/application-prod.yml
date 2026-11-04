@@ -1,0 +1,28 @@
+spring:
+  flyway:
+    locations: classpath:db/migration
+    # A database that was first created in dev may contain seed migrations this build does not ship.
+    ignore-migration-patterns: "*:missing"
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+logging:
+  level:
+    root: INFO
+    com.cuteicles: INFO
+
+app:
+  cors:
+    # No default on purpose: production must name its frontend origin(s). Startup fails if unset.
+    allowed-origins: ${FRONTEND_ORIGINS}
+  jwt:
+    cookie-secure: ${COOKIE_SECURE:true}
+    expose-token-in-body: false
+  payments:
+    test-mode-enabled: false
+  notifications:
+    dev-outbox-dir: ""

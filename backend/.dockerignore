@@ -1,0 +1,9 @@
+target/
+uploads/
+dev-outbox/
+.env
+.env.*
+!.env.example
+*.log
+.git
+.idea/
