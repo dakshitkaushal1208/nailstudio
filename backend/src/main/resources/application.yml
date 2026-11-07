@@ -20,18 +20,6 @@ spring:
     enabled: true
     locations: classpath:db/migration
     baseline-on-migrate: false
-  mail:
-    host: ${SPRING_MAIL_HOST:}
-    port: ${SPRING_MAIL_PORT:587}
-    username: ${SPRING_MAIL_USERNAME:}
-    password: ${SPRING_MAIL_PASSWORD:}
-    properties:
-      mail.smtp.auth: true
-      mail.smtp.starttls.enable: true
-      # Never let a slow mail server hang a request for long.
-      mail.smtp.connectiontimeout: 5000
-      mail.smtp.timeout: 8000
-      mail.smtp.writetimeout: 8000
   servlet:
     multipart:
       max-file-size: 6MB
@@ -92,7 +80,7 @@ app:
 
     login-max-failures: 5
     login-lock-minutes: 15
-    reset-token-minutes: 10
+    reset-token-minutes: 30
     rate-limit:
       enabled: true
       auth-requests-per-minute: 20
