@@ -65,7 +65,7 @@ app:
     ttl-minutes: ${JWT_TTL_MINUTES:480}
     cookie-name: ci_session
     cookie-secure: ${COOKIE_SECURE:false}
-    cookie-same-site: Lax
+    cookie-same-site: ${COOKIE_SAME_SITE:None}
     # When true the login response also carries "token" (for Swagger / PowerShell testing). Keep false in production.
     expose-token-in-body: false
 
